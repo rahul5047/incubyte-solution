@@ -21,4 +21,7 @@ class TestAdd(unittest.TestCase):
             self.assertRaises(Exception,add,"-3,-4")
     def test_for_Numbers_bigger_ignored(self):
         self.assertEqual(add("2,1001"),2)
+        
+    def test_for_handle_newline(self):
+        self.assertEqual(add("2,\n,3"),5)
     

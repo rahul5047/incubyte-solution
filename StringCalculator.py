@@ -2,8 +2,12 @@ import numbers
 
 
 def add(string):
-    # addition for more then 1 number using sum()
-    string_numbers = string.split(",")
+    delimiter=","
+    
+    # addition for more then 1 number using sum() and handle line 
+    string_numbers =string.replace("\n",delimiter)
+    string_numbers = string.split(delimiter)
+    
     numbers =[]
     
     for i in string_numbers:
