@@ -9,7 +9,7 @@ def add(string):
         try:
             number = int(i)
             if number <0:
-                raise Exception("Negatives not allowed")
+                raise Exception("Negatives not allowed! following are list of negative number:%d".format(numbers))
         except ValueError:
             number =0
         numbers.append(number)
