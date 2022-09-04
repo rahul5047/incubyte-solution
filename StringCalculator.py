@@ -11,8 +11,9 @@ def add(string):
         except ValueError:
             number =0
         numbers.append(number)
-    #check string empty or 1 number
+    #also handle unknown numbers using splitting numbers
     return sum(numbers)
+#check string empty or 1 number
     if string == "1":
         return 1
     else:
