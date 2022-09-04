@@ -19,4 +19,6 @@ class TestAdd(unittest.TestCase):
             
     def test_for_print_negative_number(self):
             self.assertRaises(Exception,add,"-3,-4")
+    def test_for_Numbers_bigger_ignored(self):
+        self.assertEqual(add("2,1001"),2)
     

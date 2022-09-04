@@ -5,9 +5,14 @@ def add(string):
     # addition for more then 1 number using sum()
     string_numbers = string.split(",")
     numbers =[]
+    
     for i in string_numbers:
         try:
             number = int(i)
+            #if number is >1000 then it will not count!
+            if number >1000:
+                continue
+            
             if number <0:
                 raise Exception("Negatives not allowed! following are list of negative number:%d".format(numbers))
         except ValueError:
