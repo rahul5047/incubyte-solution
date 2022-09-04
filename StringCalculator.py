@@ -1,7 +1,11 @@
 import numbers
 
 
+
 def add(string):
+    
+        
+    k= [string.index(x) + 1 for x in string]
     delimiter=","
     if string.startswith("//"):
         delimiter = string[2]
@@ -12,7 +16,9 @@ def add(string):
     string_numbers = string.split(delimiter)
     
     numbers =[]
-    
+    if string.isalnum():
+        return sum(numbers+k)
+        
     for i in string_numbers:
         try:
             number = int(i)
@@ -26,6 +32,7 @@ def add(string):
             number =0
         numbers.append(number)
     #also handle unknown numbers using splitting numbers
+    
     return sum(numbers)
 #check string empty or 1 number
     if string == "1":

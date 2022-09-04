@@ -27,4 +27,6 @@ class TestAdd(unittest.TestCase):
         
     def test_for_different_delimiter(self):
             self.assertEqual(add("//;\n1;2"),3)
+    def test_for_alphanumeric_addition(self):
+            self.assertEqual(add("1,2,a,c"),7)
     
