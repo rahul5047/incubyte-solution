@@ -18,4 +18,7 @@ def add(string):
         return 1
     else:
         return 0
-    
+from string import ascii_lowercase
+def position(string):
+    return "Position of alphabet: {0}".format(
+        ascii_lowercase.index(string) + 1)
