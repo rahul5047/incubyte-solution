@@ -14,4 +14,6 @@ class TestAdd(unittest.TestCase):
     
     def test_for_unknown_number(self):
         self.assertEqual(add("1,2,3,4,5"),15)
+    def test_for_negative_number(self):
+            self.assertRaises(Exception,add,"-3")
     
