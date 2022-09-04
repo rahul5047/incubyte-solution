@@ -3,9 +3,12 @@ import numbers
 
 def add(string):
     delimiter=","
-    
-    # addition for more then 1 number using sum() and handle line 
+    if string.startswith("//"):
+        delimiter = string[2]
+        string = string[3:]
     string_numbers =string.replace("\n",delimiter)
+    # addition for more then 1 number using sum() and handle line 
+   
     string_numbers = string.split(delimiter)
     
     numbers =[]

@@ -24,4 +24,7 @@ class TestAdd(unittest.TestCase):
         
     def test_for_handle_newline(self):
         self.assertEqual(add("2,\n,3"),5)
+        
+    def test_for_different_delimiter(self):
+            self.assertEqual(add("//;\n1;2"),3)
     
